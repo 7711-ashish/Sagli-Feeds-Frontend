@@ -97,13 +97,13 @@ export default function HomeScreen(props) {
 
 
         <View style = {{flexDirection : 'row'}}>
-          <ProfileWindow imgSrc = {require('../assets/Team/pavan.jpg')} linkedinUrl = "https://www.linkedin.com/in/pavan-shinde7494/" gmail = "pavanshinde7494@gmail.com" />
-          <ProfileWindow imgSrc = {require('../assets/Team/pavan.jpg')} linkedinUrl = "" gmail = "" />
+          <ProfileWindow imgSrc = {require('../assets/Team/pavan.jpg')} linkedinUrl = "https://www.linkedin.com/in/pavan-shinde7494/" gmail = "pavanshinde7494@gmail.com" >Pavan Shinde</ProfileWindow>
+          <ProfileWindow imgSrc = {require('../assets/Team/vaishnavi.jpg')} linkedinUrl = "https://www.linkedin.com/in/vaishnavi-disale-8901311a8" gmail = "vaishnavi.disale@walchandsangli.ac.in">Vaishnavi Disale</ProfileWindow> 
         </View>
 
         <View style = {{flexDirection : 'row'}}>
-          <ProfileWindow imgSrc = {require('../assets/Team/pavan.jpg')} linkedinUrl = "" gmail = "" />
-          <ProfileWindow imgSrc = {require('../assets/Team/pavan.jpg')} linkedinUrl = "" gmail = "" />
+          <ProfileWindow imgSrc = {require('../assets/Team/kajal.jpg')} linkedinUrl = "https://www.linkedin.com/in/kajalpawar" gmail = "kajal.pawar@walchadnsangli.ac.in" >Kajal Pawar</ProfileWindow>
+          <ProfileWindow imgSrc = {require('../assets/Team/ashish.jpg')} linkedinUrl = "https://www.linkedin.com/in/ashish-sutar-4b25861a1" gmail = "aashish.sutar@walchandsangli.ac.in" >Ashish Sutar</ProfileWindow>
         </View>
 
         </View>
@@ -122,12 +122,12 @@ export default function HomeScreen(props) {
                 Weather
               </Text>
               <Text style={{fontSize : 15 , color : color.footerText , fontFamily  : 'newrocker'  , marginVertical : 5} } onPress = {()=>{
-                props.navigation.navigate('DamScreen');
+                props.navigation.navigate('Crops');
               }}>
-                Dam
+                Crops
               </Text>
               <Text style={{fontSize : 15 , color : color.footerText , fontFamily  : 'newrocker' , marginVertical : 5} } onPress = {()=>{
-                props.navigation.navigate('SoilMoisture');
+                props.navigation.navigate('Soil Moisture');
               }}>
                 Soil Moisture
               </Text>

@@ -15,7 +15,7 @@ export default function ProfileWindow(props) {
 
             <View style = {styles.profileStyle}>
                 <View>
-                <Text style={{textAlign : 'center' , color : 'white' }}>Pavan Shinde</Text>
+                <Text style={{textAlign : 'center' , color : 'white' }}>{props.children}</Text>
                 </View>
                 <View style = {{  flexDirection : 'row'}} >              
 

@@ -322,7 +322,7 @@ export default function Weather() {
         {/*1. Background Image According to data from back end */}
         <View>
           <Image
-            source={{ uri: images[2] }}
+            source={{ uri: images[0] }}
             style={{ width, height, resizeMode: 'cover' }}
           />
         </View>
