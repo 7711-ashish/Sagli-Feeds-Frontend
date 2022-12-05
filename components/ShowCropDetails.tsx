@@ -18,7 +18,7 @@ import {
 
 
   useEffect(() => {
-    fetch(`https://zeet-backend-backend-7711-ashish.onrender.com/api/cropprod/${props.data[0]}/${props.data[1]}/${props.data[2]}`)
+    fetch(`https://sangli-feeds-backend.onrender.com/api/cropprod/${props.data[0]}/${props.data[1]}/${props.data[2]}`)
       .then((response) => response.json())
       .then((json) => {
         setData(json)

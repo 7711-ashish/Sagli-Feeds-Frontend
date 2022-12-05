@@ -14,7 +14,7 @@ import {
 
 
     useEffect(() => {
-      fetch(`https://zeet-backend-backend-7711-ashish.onrender.com/api/meto_hourly/soil/moist`)
+      fetch(`https://sangli-feeds-backend.onrender.com/api/meto_hourly/soil/moist`)
         .then((response) => response.json())
         .then((json) => {
           setData(json)

@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Text, View, TextInput, Dimensions, StyleSheet, TouchableOpacity, Image, ImageBackground, AsyncStorage } from 'react-native'
+import { log } from 'react-native-reanimated';
 import Colors from '../constants/color'
 
 const screenHeight = Dimensions.get('window').height + 30;
@@ -7,11 +8,23 @@ const screenWidth = Dimensions.get('window').width;
 
 export default function Signup(props) {
 
-    const click = async(e) => {
 
-
+    const loggingOut = async()=>{
         try{
 
+            await AsyncStorage.clear();
+        }catch(err){
+            
+        }
+        props.navigation.navigate('Login')
+    }
+
+    useEffect(()=>{
+        loggingOut();
+    },[])
+
+    const click = async(e) => {
+        try{
             await AsyncStorage.clear();
         }catch(err){
             

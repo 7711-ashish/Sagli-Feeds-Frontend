@@ -50,7 +50,7 @@ export default function ShowDetailsAir(props) {
         lon: longitude
       })
     };
-    fetch(`https://zeet-backend-backend-7711-ashish.onrender.com/api/meto_hourly/airqality_pm`, requestOptions)
+    fetch(`https://sangli-feeds-backend.onrender.com/api/meto_hourly/airqality_pm`, requestOptions)
       .then((response) => response.json())
       .then((json) => {
         // console.log(json)

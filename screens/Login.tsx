@@ -68,7 +68,7 @@ export default function Login(props) {
   };
 
 
-    fetch('https://zeet-backend-backend-7711-ashish.onrender.com/api/userReg/login',requestOptions)
+    fetch('https://sangli-feeds-backend.onrender.com/api/userReg/login',requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.message = "Login Success") {

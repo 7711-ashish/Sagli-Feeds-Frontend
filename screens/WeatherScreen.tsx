@@ -93,7 +93,7 @@ export default function Weather() {
           lon: longitude
         })
       };
-      const response = await fetch('https://zeet-backend-backend-7711-ashish.onrender.com/api/meto_hourly/current', requestOptions);
+      const response = await fetch('https://sangli-feeds-backend.onrender.com/api/meto_hourly/current', requestOptions);
       const json = await response.json();
       setTemp(json.temperature);
       setFtemp(((json.temperature) * 9 / 5) + 32);
@@ -126,12 +126,13 @@ export default function Weather() {
           lon: longitude
         })
       };
-      const ag = await fetch('https://zeet-backend-backend-7711-ashish.onrender.com/api/meto_hourly/hourly-forecast', requestOptions);
+      const ag = await fetch('https://sangli-feeds-backend.onrender.com/api/meto_hourly/hourly-forecast', requestOptions);
       let ag1 = await ag.json();
 
       let relh1 = [ag1.relativehumidity]
       var mn = 0, mx = 0;
       for (let i = 0; i < 24; i++) {
+        
         if (mn === 0) {
           mn = ag1.relativehumidity[i];
         }

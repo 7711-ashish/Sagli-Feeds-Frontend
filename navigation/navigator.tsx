@@ -18,6 +18,7 @@ import AirQualityScreen from "../screens/AirQualityScreen";
 
 import { createStackNavigator, HeaderStyleInterpolators } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import { DrawerContentScrollView , DrawerItemList , DrawerItem } from "@react-navigation/drawer";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -83,6 +84,17 @@ const DrawerNavigator = () => {
                 headerTintColor: 'white'
 
             }}
+
+            drawerContent={
+                (props)=>{
+                    return (
+                        <DrawerContentScrollView {...props}>
+                            <DrawerItemList {...props} />
+                            <DrawerItem label="Logout" activeTintColor="white" inactiveTintColor="white" onPress={() => props.navigation.navigate("Login")} />
+                        </DrawerContentScrollView>
+                      )
+                }
+            }
         >
             <Drawer.Screen
                 name="Feeds"
@@ -108,10 +120,7 @@ const DrawerNavigator = () => {
                 name="Info"
                 component={DamScreen}
             />
-            <Drawer.Screen
-                name="Logout"
-                component={Logout}
-            />
+          
         </Drawer.Navigator>
     )
 }

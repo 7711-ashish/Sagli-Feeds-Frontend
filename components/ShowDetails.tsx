@@ -14,7 +14,7 @@ export default function ShowDetails(props) {
 
 
   useEffect(() => {
-    fetch(`https://zeet-backend-backend-7711-ashish.onrender.com/api/meto_hourly/soil`)
+    fetch(`https://sangli-feeds-backend.onrender.com/api/meto_hourly/soil`)
       .then((response) => response.json())
       .then((json) => {
         setData(json)

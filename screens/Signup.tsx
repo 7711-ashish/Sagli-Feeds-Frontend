@@ -22,7 +22,7 @@ export default function Signup(props) {
   };
 
 
-    fetch('https://zeet-backend-backend-7711-ashish.onrender.com/api/userReg/signup',requestOptions)
+    fetch('https://sangli-feeds-backend.onrender.com/api/userReg/signup',requestOptions)
       .then((response) => response.json())
       .then((result) => {
         console.log(result)
