@@ -5,16 +5,23 @@ import {
 import { TouchableOpacity } from "react-native-gesture-handler";
 import React, { useEffect, useState } from 'react';
 
+var today = new Date();
+
 export default function ShowDetails(props) {
 
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [soiltemp, setSoilTemp] = useState('0');
+  const [date, setDate] = useState(today.toDateString())
   // console.log(data);
 
 
   useEffect(() => {
-    fetch(`https://sangli-feeds-backend.onrender.com/api/meto_hourly/soil`)
+
+    let lat = global.loc.coords.latitude
+    let long = global.loc.coords.longitude
+
+    fetch(`https://sangli-feeds-backend.onrender.com/api/meto_hourly/soil/${lat}/${long}`)
       .then((response) => response.json())
       .then((json) => {
         setData(json)
@@ -46,8 +53,8 @@ export default function ShowDetails(props) {
               <TouchableOpacity>
                   <Text style={styles.text}>
 
-                      Scantime:{"\n"}
-                      2022-12-01 {"\n"}{"\n"}
+                        Scantime:{"\n"}
+                        {date} {"\n"}{"\n"}
                       Soil Temperature: {soiltemp} °C
                       {/* {props.details}
                       {props.tempdepth} */}
@@ -62,16 +69,16 @@ export default function ShowDetails(props) {
 const styles = StyleSheet.create({
 
   text: {
-      height: 180,
-      margin: 15,
+      height: 150,
+      margin: 10,
       padding: 30,
       paddingBottom: 10,
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: 'rgba(255, 255, 255, 0.7)',
       borderRadius: 30,
-      marginTop: 20,
-      marginBottom: 10,
+      // marginTop: 20,
+      // marginBottom: 10,
       fontWeight: 'bold',
       fontSize: 20,
   },

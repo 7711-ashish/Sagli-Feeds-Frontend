@@ -51,13 +51,13 @@ export default function AirQualityScreen() {
                         title="Particulate Matter"
                         handleSelect={handelDropDown1}
                     />
-                    {setpmshow && <ShowDetails details={details} pm={pm}  />}
+                    {pmshow && <ShowDetails details={details} pm={pm}  />}
 
                     <DropPM
                         title="Gases"
                         handleSelect={handelDropDown2}
                     />
-                    {setgasShow && <ShowDetailsAir data={details}  gases={gas} />}
+                    {gasShow && <ShowDetailsAir data={details}  gases={gas} />}
 
 
             </ImageBackground>

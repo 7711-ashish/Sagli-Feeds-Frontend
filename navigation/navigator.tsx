@@ -116,10 +116,10 @@ const DrawerNavigator = () => {
                 name = "Air Quality"
                 component={AirQualityScreen}
             />
-            <Drawer.Screen
+            {/* <Drawer.Screen
                 name="Info"
                 component={DamScreen}
-            />
+            /> */}
           
         </Drawer.Navigator>
     )

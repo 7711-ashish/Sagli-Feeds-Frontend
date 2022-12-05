@@ -75,6 +75,8 @@ export default function Login(props) {
           alert('You are logged in.');
           storeData(result.user);
           console.log(result.user)
+          global.loc = location
+          console.log(global.loc)
           props.navigation.navigate('DrawerNavigator');
         } else {
           alert('Please check your login information.');

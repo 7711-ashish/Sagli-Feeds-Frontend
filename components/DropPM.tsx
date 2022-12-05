@@ -82,7 +82,7 @@ import React, { useState } from 'react';
       backgroundColor: 'rgba(255, 255, 255, 0.55)',
       padding: 15,
       margin:15,
-      marginTop:50,
+      marginTop:30,
       borderRadius: 20,
     },
     dropdown: {

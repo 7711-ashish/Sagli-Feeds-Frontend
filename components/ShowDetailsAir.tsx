@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'rgba(255, 255, 255, 0.7)',
     borderRadius: 30,
-    marginTop: 30,
+    marginTop: 10,
     fontWeight: 'bold',
     fontSize: 20,
   },

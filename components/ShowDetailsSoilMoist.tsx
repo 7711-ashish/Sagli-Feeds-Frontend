@@ -4,17 +4,24 @@ import {
   } from "react-native"
   import { TouchableOpacity } from "react-native-gesture-handler";
   import React, { useEffect, useState } from 'react';
+
+  var today = new Date();
   
   export default function ShowDetailsSoilMoist(props) {
 
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
     const [soilMoist, setSoilMoist] = useState('0');
+    const [date, setDate] = useState(today.toDateString())
     // console.log(data);
 
 
     useEffect(() => {
-      fetch(`https://sangli-feeds-backend.onrender.com/api/meto_hourly/soil/moist`)
+
+      let lat = global.loc.coords.latitude
+      let long = global.loc.coords.longitude
+
+      fetch(`https://sangli-feeds-backend.onrender.com/api/meto_hourly/soil/moist/${lat}/${long}`)
         .then((response) => response.json())
         .then((json) => {
           setData(json)
@@ -46,7 +53,7 @@ import {
                     <Text style={styles.text}>
 
                         Scantime:{"\n"}
-                        2022-12-01{"\n"}{"\n"}
+                        {date} {"\n"}{"\n"}
                         Soil Moisture: {soilMoist} m³
                         {/* {props.details}
                         {props.tempdepth} */}
