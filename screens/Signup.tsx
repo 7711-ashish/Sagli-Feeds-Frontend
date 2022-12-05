@@ -78,7 +78,7 @@ export default function Signup(props) {
       <TouchableOpacity 
         style={styles.loginBtn}
         onPress={(e)=>{
-          clickSignup(e)
+          clickSignup()
         }}
       >
           <Text style={{...styles.loginText ,color : 'white'}}>Signup</Text>
